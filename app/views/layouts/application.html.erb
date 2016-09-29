@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TalkTwo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">Event App</span>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <button type="button" class="btn btn-default navbar-btn">
+            <%= link_to "New Coversation", new_conversation_path %>
+          </button>
+          <button type="button" class="btn btn-default navbar-btn">
+            <%= link_to "All Topics", topics_path %>
+          </button>
+          <button type="button" class="btn btn-default navbar-btn">
+            <%= link_to "New Topic", new_topic_path %>
+          </button>
+        </ul>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>
